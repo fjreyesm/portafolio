@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frannklin´s Portafolio</title>
+
+    <link rel="stylesheet" href="./ccs/index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lobster&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+  </head>
+  <body class="wrapper">
+    <!-- Path: index.html -->
+
+    <header>
+      <nav class="nav-menu">
+        <input type="checkbox" id="check">
+        <label for="checkbtn" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        <ul class="menu-items">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#about">About me</a>
+          </li>
+          <li>
+            <a href="#portafolio">Portafolio</a>
+          </li>
+          <li>
+            <a href="#blog">Blog</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="presentacion">
+        <img src="./images/emoji1.jpeg" alt="about" />
+        <div>
+          <h1>Hello! I am Fran</h1>
+        </div>
+      </div>
+      <section id="about" class="resume">
+        <div>
+          <h2>About me</h2>
+          <p>
+            My name is Franklin Reyes. I'm a Front End Engineer based in
+            Mallorca. I describe myself as a passionate learner who loves
+            coding, open source, and the web platform ❤️.
+          </p>
+
+          <p>
+            I´d like to create and contribute to open source projects. That
+            helps me to learn a ton of new stuff, grow as a developer and
+            support other open source projects.
+          </p>
+        </div>
+        <div class="tecnologias">
+          <img
+            src="./images/tecnologias/CSS3_logo_and_wordmark.svg.png"
+            alt="css"
+          />
+
+          <img
+            src="./images/tecnologias/120px-HTML5_logo_and_wordmark.svg.png"
+            alt="html"
+          />
+
+          <img src="./images/tecnologias/React-icon.svg.png" alt="JavaScript" />
+
+          <img src="./images/tecnologias/scratch.png" alt="scratch" />
+
+          <img src="./images/tecnologias/react.png" alt="React" />
+
+          <img src="./images/tecnologias/git.png" alt="git" />
+        </div>
+      </section>
+      <section class="portafolio" id="portafolio">
+        <h2>Proyectos</h2>
+        <div>
+          <div class="portafolio-item">
+            <img src="./images/proyectos/450_1000.jpg" alt="fotoProyecto1" />
+            <div>
+              <h3>Proyecto 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, quisquam.
+              </p>
+            </div>
+          </div>
+          <div class="portafolio-item">
+            <img
+              src="./images/proyectos/5aemapu_fanzines.jpeg"
+              alt="fotoProyecto2"
+            />
+            <div>
+              <h3>Proyecto 2</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, quisquam.
+              </p>
+            </div>
+          </div>
+          <div class="portafolio-item">
+            <img
+              src="./images/proyectos/Ed91fgRWsAEQ_jU.jpg"
+              alt="fotoProyecto3"
+            />
+            <div>
+              <h3>Proyecto 3</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, quisquam.
+              </p>
+            </div>
+          </div>
+          <div class="portafolio-item">
+            <img
+              src="./images/proyectos/new-project-wizard-choose_2x.png"
+              alt="fotoProyecto4"
+            />
+            <div>
+              <h3>Proyecto 4</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, quisquam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="blog">
+        <div class="blog">
+          <h2>Blog</h2>
+          <div class="blog-item">
+            <img src="./images/blog1.jpg" alt="blog1" />
+            <div>
+              <h3>Blog 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, quisquam.
+              </p>
+            </div>
+          </div>
+          <div class="blog-item">
+            <img src="./images/blog2.jpg" alt="blog2" />
+            <div>
+              <h3>Blog 2</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, quisquam.
+              </p>
+            </div>
+          </div>
+          <div class="blog-item">
+            <img src="./images/blog3.jpg" alt="blog3" />
+            <div>
+              <h3>Blog 3</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, quisquam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacto" id="contact">
+        <h2>Get in Touch</h2>
+        <div>
+          <div>
+            <p>
+              Send a general message or details of a project you'd like me to be
+              a part of and I'll get back to you as soon as possible.
+            </p>
+          </div>
+          <form action="">
+            <div class="form-group">
+              <label for="">Nombre</label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="form-group">
+              <label for="">Email</label>
+              <input type="email" name="" id="" />
+            </div>
+            <div class="form-group">
+              <label for="">Mensaje</label>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-group boton">
+              <input type="submit" value="Enviar" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a href="#">
+        <img src="./img/facebook.png" alt="facebook" />
+      </a>
+      <a href="#">
+        <img src="./img/twitter.png" alt="twitter" />
+      </a>
+      <a href="#">
+        <img src="./img/instagram.png" alt="instagram" />
+      </a>
+    </footer>
+  </body>
+</html>

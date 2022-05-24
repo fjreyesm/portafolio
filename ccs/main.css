@@ -1,0 +1,362 @@
+* {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-decoration: none;
+  list-style: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 1px 1px 5px #000;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  padding-right: 3rem;
+}
+.nav-menu > * {
+  margin: 0.5em 0.8em;
+}
+
+.menu-items > *:hover {
+  color: white;
+  border-bottom: solid 1px #fff;
+  font-size: 1.1em;
+}
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  padding-right: 3rem;
+}
+
+.menu-items > * {
+  margin: 0 0.8em;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  margin: 0 auto;
+  width: 1240px;
+}
+.presentacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.presentacion img {
+  margin: auto;
+  width: 15.625em;
+  height: 15.625em;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.presentacion > div {
+  width: 50%;
+  padding: 25px;
+}
+
+.resume {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.resume > div:first-child {
+  width: 50%;
+  padding: 25px;
+  background-color: lightgrey;
+}
+
+.tecnologias {
+  display: flex;
+  flex-direction: row;
+  margin: 5rem auto;
+  width: 50%;
+  background-color: olive;
+}
+.tecnologias img {
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  padding: 1rem;
+  border: #000 1px solid;
+}
+
+.portafolio {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  background-image: url("/images/coding.avif");
+  background: rgba(0, 0, 0, 0.7) url("/images/coding.avif");
+  background-blend-mode: luminosity;
+  width: 100%;
+  height: auto;
+  margin: 0s;
+}
+.portafolio > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  background-color: semi-transparent;
+}
+
+.portafolio > div > div {
+  margin: 3rem;
+  padding: 1rem;
+  background-color: white;
+  width: 20%;
+}
+.tecnologias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 30%;
+}
+.portafolio img {
+  background-color: #f5f5f5;
+  width: 150px;
+  height: 150px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 0.5em;
+}
+footer a {
+  color: black;
+  margin: 0 0.5em;
+}
+
+.blog {
+  height: 100vh;
+}
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.5em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  border-radius: 0.5em;
+}
+.boton {
+  justify-content: right;
+}
+
+.contacto label {
+  width: 60px;
+}
+
+.contacto > div {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px;
+  margin: 10px 10px;
+}
+.contacto > div > div {
+  width: 20%;
+}
+
+header,
+footer {
+  background-color: black;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS */
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .presentacion > div {
+    padding: 1px;
+    background-color: orange;
+  }
+
+  .presentacion > img {
+    width: 40%;
+    height: 30%;
+    background-color: orange;
+  }
+  .portafolio {
+    background-color: white;
+  }
+
+  .portafolio > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0s;
+    justify-content: center;
+  }
+
+  .portafolio > div > div {
+    margin: 3rem;
+    padding: 1rem;
+    background-color: white;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .contacto > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    margin: 10px 10px;
+  }
+
+  .contacto > div > div {
+    width: 100%;
+  }
+
+  .menu-horizontal-items {
+    display: none;
+  }
+
+  ul {
+    display: none;
+  }
+
+  input:checked ~ ul {
+    display: block;
+  }
+
+  input {
+    display: visible;
+  }
+
+  label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+
+  /* Estilo del boton cuando se pasa el mouse por encima*/
+  label:hover {
+    background: yellow;
+  }
+
+  /* Estilo del boton cuando el menú está expandido*/
+  input:checked ~ label {
+    background: lightgrey;
+  }
+
+  ul {
+    margin-top: 0;
+    padding: 0;
+    width: 200px;
+  }
+
+  header {
+    background-color: white;
+  }
+
+  nav {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-menu li {
+    left: -1000px;
+  }
+
+  .nav-menu li a {
+    color: black;
+
+    font-size: 16px;
+  }
+
+  li a:hover {
+    color: red;
+    transition: 0s;
+  }
+
+  input[type="checkbox"]:checked ~ * .menu-items {
+    position: fixed;
+    flex-direction: column;
+    right: 5%;
+    width: 60px;
+    cursor: pointer;
+    height: auto;
+    background-color: pink;
+    top: 30px;
+    transition: all 0.5s;
+    display: block;
+    left: 0;
+  }
+}
