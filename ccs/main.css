@@ -12,40 +12,28 @@ header {
   width: 100%;
   box-shadow: 1px 1px 5px #000;
 }
+header,
+footer {
+  background-color: black;
+}
+header a {
+  color: white;
+}
 input[type="checkbox"] {
   display: none;
 }
-
-.nav-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
-  padding-right: 3rem;
+nav ul {
+  float: right;
+  margin-right: 1.25em;
 }
-.nav-menu > * {
-  margin: 0.5em 0.8em;
+nav ul li {
+  display: inline-block;
+  padding-right: 1rem;
 }
-
-.menu-items > *:hover {
+nav ul li > *:hover {
   color: white;
   border-bottom: solid 1px #fff;
   font-size: 1.1em;
-}
-.menu-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
-  padding-right: 3rem;
-}
-
-.menu-items > * {
-  margin: 0 0.8em;
-}
-
-ul {
-  list-style: none;
 }
 body {
   margin: 0 auto;
@@ -65,12 +53,10 @@ body {
   border-radius: 50%;
   border: 1px solid black;
 }
-
 .presentacion > div {
   width: 50%;
   padding: 25px;
 }
-
 .resume {
   margin: 0 auto;
   height: 100vh;
@@ -82,7 +68,6 @@ body {
   padding: 25px;
   background-color: lightgrey;
 }
-
 .tecnologias {
   display: flex;
   flex-direction: row;
@@ -98,7 +83,6 @@ body {
   padding: 1rem;
   border: #000 1px solid;
 }
-
 .portafolio {
   display: flex;
   flex-direction: column;
@@ -119,7 +103,6 @@ body {
   width: 100%;
   background-color: semi-transparent;
 }
-
 .portafolio > div > div {
   margin: 3rem;
   padding: 1rem;
@@ -147,7 +130,6 @@ body {
   width: 150px;
   height: 150px;
 }
-
 footer {
   display: flex;
   flex-direction: row;
@@ -160,7 +142,6 @@ footer a {
   color: black;
   margin: 0 0.5em;
 }
-
 .blog {
   height: 100vh;
 }
@@ -172,7 +153,6 @@ footer a {
   margin: 2rem;
   border-radius: 0.5em;
 }
-
 .form-group {
   display: flex;
   flex-direction: row;
@@ -182,11 +162,9 @@ footer a {
 .boton {
   justify-content: right;
 }
-
 .contacto label {
   width: 60px;
 }
-
 .contacto > div {
   width: 70%;
   display: flex;
@@ -198,17 +176,6 @@ footer a {
 .contacto > div > div {
   width: 20%;
 }
-
-header,
-footer {
-  background-color: black;
-}
-
-header a {
-  color: white;
-  text-decoration: none;
-}
-
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
@@ -280,16 +247,15 @@ header a {
     display: none;
   }
 
-  ul {
-    display: none;
-  }
-
   input:checked ~ ul {
     display: block;
   }
 
-  input {
-    display: visible;
+  .checkbtn {
+    display: block;
+    float: right;
+    margin-right: 1.25em;
+    line-height: 30px;
   }
 
   label {
@@ -299,7 +265,7 @@ header a {
     border-radius: 5px;
     width: 30px;
     height: 30px;
-    line-height: 30px;
+
     font-weight: bold;
     text-align: center;
     user-select: none;
@@ -315,48 +281,34 @@ header a {
     background: lightgrey;
   }
 
-  ul {
-    margin-top: 0;
+  nav ul {
+    position: fixed;
+    margin-top: 30px;
     padding: 0;
-    width: 200px;
+    width: 40%;
+    height: 35vh;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 1em;
+    padding: 0;
+    list-style: none;
   }
 
   header {
     background-color: white;
   }
-
-  nav {
-    background-color: orange;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-menu li {
-    left: -1000px;
-  }
-
-  .nav-menu li a {
-    color: black;
-
-    font-size: 16px;
-  }
-
-  li a:hover {
+  ul li a:hover {
     color: red;
     transition: 0s;
+    background-color: grey;
   }
-
-  input[type="checkbox"]:checked ~ * .menu-items {
-    position: fixed;
-    flex-direction: column;
-    right: 5%;
-    width: 60px;
-    cursor: pointer;
-    height: auto;
-    background-color: pink;
-    top: 30px;
-    transition: all 0.5s;
-    display: block;
-    left: 0;
+  input[type="checkbox"]:checked ~ ul {
+    background-color: black;
+    left: 0%;
   }
 }
