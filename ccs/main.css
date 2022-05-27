@@ -37,7 +37,6 @@ nav ul li > *:hover {
 }
 body {
   margin: 0 auto;
-  width: 1240px;
 }
 .presentacion {
   display: flex;
@@ -55,7 +54,7 @@ body {
 }
 .presentacion > div {
   width: 50%;
-  padding: 25px;
+  padding: 1.5rem;
 }
 .resume {
   margin: 0 auto;
@@ -79,7 +78,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  width: 80%;
+  width: 70%;
 }
 
 .tecnologias img {
@@ -104,6 +103,7 @@ body {
 .portafolio > div {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 2rem;
   width: 100%;
   background-color: semi-transparent;
@@ -112,7 +112,7 @@ body {
   margin: 0.5rem;
   padding: 1rem;
   background-color: white;
-  width: 25%;
+  width: 30%;
 }
 .portafolio > div > div > div a {
   text-align: right;
@@ -144,6 +144,30 @@ footer a {
 }
 .blog {
   height: 100vh;
+  display: flex;
+}
+
+.blog aside {
+  width: 20%;
+  background-color: silver;
+  padding: 1rem;
+  padding-top: 3rem;
+  align-items: center;
+}
+
+.blog-item {
+  min-width: 80%;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: lightgray;
 }
 .contacto {
   display: flex;
@@ -175,7 +199,7 @@ footer a {
   width: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 25px;
   margin: 10px 10px;
 }
@@ -195,7 +219,48 @@ footer {
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  /* CSS */
+  body {
+    background-color: blue;
+  }
+  .presentacion img {
+    width: 12.625em;
+    height: 12.625em;
+  }
+
+  .presentacion div {
+    display: flex;
+    flex-direction: column;
+    padding: 1.1rem;
+    align-items: end;
+    margin-right: 1rem;
+  }
+
+  .tecnologias {
+    width: 90%;
+  }
+  .portafolio-item {
+    width: 45%;
+  }
+
+  .contacto > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.25rem;
+    margin: 0.4rem 0.4rem;
+  }
+  .contacto > div > div {
+    width: 100%;
+  }
+  .boton {
+    justify-content: right;
+  }
+  form div:last-child {
+    background-color: orange;
+    width: 15rem;
+    padding-left: 9rem;
+  }
 }
 
 /* 
@@ -355,5 +420,9 @@ footer {
   }
   .tecnologias img {
     margin: 0.3em;
+  }
+
+  .form-group {
+    padding-left: 3rem;
   }
 }
