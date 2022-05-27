@@ -68,8 +68,9 @@ body {
   padding: 25px;
 }
 
-.resume h2 {
-  margin-top: 5px;
+h2 {
+  margin-top: 3.5rem;
+  text-align: center;
 }
 .tecnologias {
   display: flex;
@@ -157,6 +158,10 @@ footer a {
 
 .blog-item {
   min-width: 80%;
+}
+.blog div {
+  background-color: orange;
+  max-height: 100vh;
 }
 
 article {
