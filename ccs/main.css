@@ -19,9 +19,7 @@ footer {
 header a {
   color: white;
 }
-input[type="checkbox"] {
-  display: none;
-}
+
 nav ul {
   float: right;
   margin-right: 1.25em;
@@ -398,6 +396,24 @@ footer {
     padding: 0;
     list-style: none;
   }
+  input[type="checkbox1"]:checked ~ ul {
+    background-color: orange;
+    left: 0%;
+  }
+
+  .close-menu {
+    background-color: pink;
+    left: -33%;
+    font-size: 5px;
+    font: white;
+    margin-left: 5rem;
+  }
+  .open-menu {
+    background-color: purple;
+    left: 0;
+    font-size: 16px;
+    margin-left: 1rem;
+  }
 
   header {
     background-color: white;
@@ -406,14 +422,6 @@ footer {
     color: red;
     transition: 0s;
     background-color: grey;
-  }
-  input[type="checkbox"]:checked ~ ul {
-    background-color: black;
-    left: 0%;
-  }
-
-  .close-menu menu {
-    background-color: orange;
   }
 
   .resume div:first-child {
