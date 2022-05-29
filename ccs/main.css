@@ -16,6 +16,9 @@ header,
 footer {
   background-color: black;
 }
+h1 {
+  margin: 0.5rem;
+}
 header a {
   color: white;
 }
@@ -51,7 +54,7 @@ body {
   border: 1px solid black;
 }
 .presentacion > div {
-  width: 50%;
+  width: 60%;
   padding: 1.5rem;
 }
 .resume {
@@ -69,6 +72,10 @@ body {
 h2 {
   margin-top: 3.5rem;
   text-align: center;
+}
+
+.portafolio > h2 {
+  background-color: white;
 }
 .tecnologias {
   display: flex;
@@ -236,6 +243,7 @@ footer {
     padding: 1.1rem;
     align-items: end;
     margin-right: 1rem;
+    width: 70%;
   }
 
   .tecnologias {
@@ -283,17 +291,15 @@ footer {
   }
 
   .presentacion > img {
-    width: 40%;
-    height: 30%;
-    margin-top: 3rem;
+    width: 12rem;
+    height: 12rem;
+    margin-top: 4rem;
     margin-bottom: 1rem;
-  }
-  .portafolio {
-    background-color: white;
   }
 
   .portafolio > h2 {
     margin: 2.5rem 1rem 0.5rem;
+    background-color: white;
   }
 
   .portafolio > div {
@@ -380,11 +386,8 @@ footer {
 
   nav ul {
     position: fixed;
-    margin-top: 30px;
-    padding-left: 1em;
     padding: 0;
     min-width: 35%;
-    height: 35vh;
     left: -100%;
     text-align: left;
     transition: all 0.5s;
@@ -409,10 +412,10 @@ footer {
     margin-left: 5rem;
   }
   .open-menu {
-    background-color: purple;
-    left: 0;
+    background-color: darkgray;
+    left: 0px;
     font-size: 16px;
-    margin-left: 1rem;
+    margin-top: 14px;
   }
 
   header {
@@ -421,7 +424,7 @@ footer {
   ul li a:hover {
     color: red;
     transition: 0s;
-    background-color: grey;
+    background-color: silver;
   }
 
   .resume div:first-child {
