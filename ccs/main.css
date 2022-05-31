@@ -1,3 +1,99 @@
+.brand {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+.brand:before {
+  background-size: 100% 100%;
+  content: "..coding!";
+  line-height: 205px;
+  color: black;
+  font-size: 20px;
+  font-family: "HEAVITAS", "Helvetica Rounded", Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 9999;
+}
+.logo {
+  animation: 5s linear infinite;
+  animation-name: rotate-0;
+  animation-delay: 0s;
+  transform-origin: 50% 50%;
+  transform: rotate(0deg);
+}
+svg path {
+  fill: none;
+  stroke-width: 2;
+  top: 0;
+  left: 0;
+  /*mix-blend-mode: multiply;*/
+  transform-origin: 50% 50%;
+  transform: rotate(0deg);
+  animation: 4s linear infinite;
+}
+.logo svg path:nth-child(1) {
+  opacity: 1;
+  animation-name: rotate-1;
+  animation-delay: 0.5s;
+}
+.logo svg path:nth-child(2) {
+  opacity: 0.5;
+  animation-name: rotate-2;
+  animation-delay: 0.6s;
+}
+.logo svg path:nth-child(3) {
+  opacity: 0.8;
+  animation-name: rotate-3;
+  animation-delay: 0.7s;
+}
+@keyframes scale-1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotate-0 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotate-3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 * {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
@@ -72,12 +168,10 @@ body {
   width: 80%;
   padding: 25px;
 }
-
 h2 {
   margin-top: 3.5rem;
   text-align: center;
 }
-
 .portafolio > h2 {
   background-color: white;
 }
@@ -90,11 +184,10 @@ h2 {
   align-items: center;
   width: 70%;
 }
-
 .tecnologias img {
   background-color: blue;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin: auto;
   padding: 1rem;
   border: #000 1px solid;
@@ -220,27 +313,30 @@ article {
 .contacto > div > div {
   width: 30%;
 }
-
 footer {
   color: white;
   padding: 0.1em;
   margin: 0.1em 0;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: flex-end;
+}
+footer img {
+  width: 1.5rem;
+  height: auto;
+  margin-top: 0.4rem;
 }
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
-
 @media (min-width: 481px) and (max-width: 767px) {
-  body {
-    background-color: blue;
-  }
   .presentacion img {
     width: 12.625em;
     height: 12.625em;
   }
-
   .presentacion div {
     display: flex;
     flex-direction: column;
@@ -249,14 +345,15 @@ footer {
     margin-right: 1rem;
     width: 70%;
   }
-
+  .presentacion {
+    padding: 1.5rem 1.5rem;
+  }
   .tecnologias {
     width: 90%;
   }
   .portafolio-item {
     width: 45%;
   }
-
   .contacto > div {
     width: 100%;
     display: flex;
@@ -272,40 +369,46 @@ footer {
     justify-content: right;
   }
   form div:last-child {
-    background-color: orange;
     width: 15rem;
     padding-left: 9rem;
   }
+  .picture {
+    width: 10%;
+    height: auto;
+    background-color: orange;
+  }
 }
-
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
-
 @media (min-width: 320px) and (max-width: 480px) {
   .presentacion {
     display: flex;
     flex-direction: column;
     justify-content: left;
+    padding-top: 3rem;
   }
-
   .presentacion > div {
     padding: 1px;
   }
-
   .presentacion > img {
-    width: 12rem;
-    height: 12rem;
+    width: 8rem;
+    height: 8rem;
     margin-top: 4rem;
     margin-bottom: 1rem;
   }
-
+  .brand {
+    display: none;
+  }
+  .presentacion > div > p:first-child {
+    margin-top: 5rem;
+    background-color: orange;
+  }
   .portafolio > h2 {
     margin: 2.5rem 1rem 0.5rem;
     background-color: white;
   }
-
   .portafolio > div {
     display: flex;
     flex-direction: column;
@@ -315,7 +418,6 @@ footer {
     margin: 0s;
     justify-content: center;
   }
-
   .portafolio > div > div {
     margin: 0.5rem 1.5rem;
     padding: 1rem;
@@ -326,7 +428,6 @@ footer {
     padding: 0.1rem;
     margin: 1rem;
   }
-
   .contacto h2 {
     margin-top: 2.5rem;
     margin-bottom: 0.5rem;
@@ -334,7 +435,6 @@ footer {
   .contacto p {
     font-size: small;
   }
-
   .contacto > div {
     width: 100%;
     display: flex;
@@ -346,48 +446,38 @@ footer {
   .contacto form div {
     margin: 0.15em;
   }
-
   .contacto > div > div {
     width: 100%;
   }
-
   .menu-horizontal-items {
     display: none;
   }
-
   input:checked ~ ul {
     display: block;
   }
-
   .checkbtn {
     display: block;
     float: right;
     margin-right: 1.25em;
     line-height: 30px;
   }
-
   label {
     box-sizing: border-box;
     display: inline-block;
-
     width: 30px;
     height: 30px;
-
     font-weight: bold;
     text-align: center;
     user-select: none;
   }
-
   /* Estilo del boton cuando se pasa el mouse por encima*/
   label:hover {
     background: yellow;
   }
-
   /* Estilo del boton cuando el menú está expandido*/
   input:checked ~ label {
     background: lightgrey;
   }
-
   nav ul {
     position: fixed;
     padding: 0;
@@ -396,20 +486,13 @@ footer {
     text-align: left;
     transition: all 0.5s;
   }
-
   nav ul li {
     display: block;
     margin: 1em;
     padding: 0;
     list-style: none;
   }
-  input[type="checkbox1"]:checked ~ ul {
-    background-color: orange;
-    left: 0%;
-  }
-
   .close-menu {
-    background-color: pink;
     left: -33%;
     font-size: 5px;
     font: white;
@@ -421,16 +504,13 @@ footer {
     font-size: 16px;
     margin-top: 14px;
   }
-
   header {
     background-color: white;
   }
   ul li a:hover {
-    color: red;
     transition: 0s;
     background-color: silver;
   }
-
   .resume div:first-child {
     width: 100%;
     padding: 0;
@@ -441,7 +521,6 @@ footer {
   .tecnologias img {
     margin: 0.3em;
   }
-
   .form-group {
     padding-left: 3rem;
   }
