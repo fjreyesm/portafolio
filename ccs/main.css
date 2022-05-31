@@ -472,11 +472,11 @@ footer img {
   }
   /* Estilo del boton cuando se pasa el mouse por encima*/
   label:hover {
-    background: yellow;
+    background: white;
   }
   /* Estilo del boton cuando el menú está expandido*/
   input:checked ~ label {
-    background: lightgrey;
+    background: white;
   }
   nav ul {
     position: fixed;
@@ -492,17 +492,12 @@ footer img {
     padding: 0;
     list-style: none;
   }
-  .close-menu {
-    left: -33%;
-    font-size: 5px;
-    font: white;
-    margin-left: 5rem;
-  }
+
   .open-menu {
-    background-color: darkgray;
+    background-color: darkgrey;
     left: 0px;
     font-size: 16px;
-    margin-top: 14px;
+    margin-top: 30px;
   }
   header {
     background-color: white;
