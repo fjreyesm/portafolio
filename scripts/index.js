@@ -14,6 +14,4 @@ opcionCerrar.addEventListener("click", closeMenu);
 //ejecucion
 function closeMenu(event) {
   menuDesp.classList.remove("open-menu");
-  menuDesp.classList.add("close-menu");
-  menuDesp.classList.remove("close-menu");
 }
